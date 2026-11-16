@@ -1,0 +1,19 @@
+{
+  "id": "WEB-DIRECTORY-SCAN-003",
+  "title": "Web vulnerability scanner behaviour",
+  "description": "Twenty or more HTTP 404 responses to one client within a minute. Automated scanners enumerate known administrative, backup and configuration paths and generate a high rate of not-found responses.",
+  "severity": "medium",
+  "dataset": "web",
+  "match": {
+    "event.action": "http_request",
+    "http.response.status_code": "404"
+  },
+  "group_by": ["source.ip"],
+  "threshold": {
+    "count": 20,
+    "window_seconds": 60
+  },
+  "tags": ["web", "reconnaissance", "scanning"],
+  "mitre": ["T1595.002"],
+  "enabled": true
+}

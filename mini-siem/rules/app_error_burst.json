@@ -1,0 +1,18 @@
+{
+  "id": "APP-ERROR-BURST-006",
+  "title": "Burst of application errors in one service",
+  "description": "Ten or more ERROR records from the same service within a minute. This is an availability signal: database outages, bad deployments and dependency failures all look like this in application logs.",
+  "severity": "medium",
+  "dataset": "app",
+  "match": {
+    "log.level": "ERROR"
+  },
+  "group_by": ["service.name"],
+  "threshold": {
+    "count": 10,
+    "window_seconds": 60
+  },
+  "tags": ["availability", "application"],
+  "mitre": [],
+  "enabled": true
+}

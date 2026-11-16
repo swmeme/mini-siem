@@ -1,0 +1,18 @@
+{"ts": "2026-11-16T09:40:20Z", "level": "INFO", "service": "api", "host": "api-01", "msg": "GET /health 200", "user": "-", "ip": "10.0.0.20"}
+{"ts": "2026-11-16T09:42:20Z", "level": "INFO", "service": "api", "host": "api-01", "msg": "POST /api/orders 201", "user": "alice", "ip": "10.0.0.12"}
+{"ts": "2026-11-16T09:43:20Z", "level": "WARN", "service": "billing", "host": "billing-01", "msg": "payment gateway latency above 2s", "user": "alice", "ip": "10.0.0.12"}
+{"ts": "2026-11-16T09:49:00Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 1}
+{"ts": "2026-11-16T09:49:03Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 2}
+{"ts": "2026-11-16T09:49:06Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 3}
+{"ts": "2026-11-16T09:49:09Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 4}
+{"ts": "2026-11-16T09:49:12Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 5}
+{"ts": "2026-11-16T09:49:15Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 6}
+{"ts": "2026-11-16T09:49:18Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 7}
+{"ts": "2026-11-16T09:49:21Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 8}
+{"ts": "2026-11-16T09:49:24Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 9}
+{"ts": "2026-11-16T09:49:27Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 10}
+{"ts": "2026-11-16T09:49:30Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 11}
+{"ts": "2026-11-16T09:49:33Z", "level": "ERROR", "service": "billing", "host": "billing-01", "msg": "database connection timeout while reserving stock", "user": "-", "ip": "10.0.0.31", "error": "OperationalError", "attempt": 12}
+{"ts": "2026-11-16T09:54:20Z", "level": "INFO", "service": "api", "host": "api-01", "msg": "GET /api/products?page=2 200", "user": "-", "ip": "10.0.0.20"}
+{"ts": "2026-11-16T09:54:40Z", "level": "ERROR", "service": "api", "host": "api-01", "msg": "invalid JSON payload for /api/orders: {\"qty\": \"two\"}", "user": "bob", "ip": "10.0.0.14"}
+this line is deliberately not JSON and will be skipped

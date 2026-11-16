@@ -1,0 +1,21 @@
+{
+  "id": "WEB-SQL-INJECTION-004",
+  "title": "SQL injection attempt in request parameters",
+  "description": "A request query string contains SQL injection idioms such as UNION SELECT, boolean tautologies, time-based delays or metadata table access. Values are URL-decoded before matching.",
+  "severity": "critical",
+  "dataset": "web",
+  "match": {
+    "event.action": "http_request",
+    "url.query": {
+      "regex": "(union\\s+(all\\s+)?select|'\\s*or\\s*'1'\\s*=\\s*'1|sleep\\s*\\(|information_schema|waitfor\\s+delay)"
+    }
+  },
+  "group_by": ["source.ip"],
+  "threshold": {
+    "count": 1
+  },
+  "cooldown_seconds": 300,
+  "tags": ["web", "injection", "initial-access"],
+  "mitre": ["T1190"],
+  "enabled": true
+}

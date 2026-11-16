@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minisiem"
+version = "1.0.0"
+description = "A lightweight SIEM pipeline for auth, web and JSON logs, written in pure Python."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Mini-SIEM contributors" }]
+keywords = ["siem", "security", "logs", "detection", "correlation", "education"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Topic :: Education",
+]
+dependencies = []
+
+[project.scripts]
+minisiem = "minisiem.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["minisiem*"]

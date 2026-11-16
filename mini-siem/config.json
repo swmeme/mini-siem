@@ -1,0 +1,31 @@
+{
+  "title": "Mini-SIEM - Web Shop Incident Review",
+  "database": "out/minisiem.db",
+  "rules": "rules",
+  "report": "out/report.html",
+  "sources": [
+    {
+      "name": "auth",
+      "parser": "auth",
+      "path": "samples/auth.log"
+    },
+    {
+      "name": "web",
+      "parser": "web",
+      "path": "samples/access.log",
+      "host": "web01"
+    },
+    {
+      "name": "app",
+      "parser": "app",
+      "path": "samples/app.jsonl"
+    }
+  ],
+  "alerts": {
+    "console": true,
+    "min_severity": "low"
+  },
+  "engine": {
+    "cooldown_factor": 1.0
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "id": "PRIV-SUDO-ROOT-005",
+  "title": "Sudo command executed as root",
+  "description": "A user invoked sudo with target user root. Legitimate in many environments, so this rule is low severity and intended as an audit trail; raise it to medium or high where root sudo is rare.",
+  "severity": "low",
+  "dataset": "auth",
+  "match": {
+    "event.action": "sudo_command",
+    "user.target.name": "root"
+  },
+  "group_by": ["user.name"],
+  "threshold": {
+    "count": 1
+  },
+  "cooldown_seconds": 600,
+  "tags": ["privilege-escalation", "audit"],
+  "mitre": ["T1548.003"],
+  "enabled": true
+}

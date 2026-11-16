@@ -1,0 +1,5 @@
+# Mini-SIEM has no third-party runtime dependencies.
+# It requires Python 3.10+ and uses only the standard library.
+#
+# Optional, for packaging the command as an installed script:
+#   pip install -e .

@@ -1,0 +1,18 @@
+{
+  "id": "SSH-BRUTEFORCE-001",
+  "title": "SSH brute force against a single account",
+  "description": "Five or more failed SSH passwords for the same account and the same source address within two minutes. Typical of an online password guessing attack against a known username.",
+  "severity": "high",
+  "dataset": "auth",
+  "match": {
+    "event.action": "login_failed"
+  },
+  "group_by": ["source.ip", "user.name"],
+  "threshold": {
+    "count": 5,
+    "window_seconds": 120
+  },
+  "tags": ["authentication", "brute-force"],
+  "mitre": ["T1110.001"],
+  "enabled": true
+}
